@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets_test_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -116,9 +118,14 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const WidgetsTestScreen()),
+          );
+        },
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.visibility),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
