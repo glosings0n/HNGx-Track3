@@ -25,4 +25,3 @@ class AppColors {
   // Added a last minuteColor
 
 
-}

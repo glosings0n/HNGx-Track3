@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'widgets_test_screen.dart';
 
 void main() {
@@ -88,34 +87,34 @@ class _MyHomePageState extends State<MyHomePage> {
       //     ],
       //   ),
       // ),
-          body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              const Text('Home Icon'),
-              AppSvgIcons.home,
-              const Text('Home Active'),
-              AppSvgIcons.homeActive,
-              const Text('Hambuger'),
-              AppSvgIcons.hamburgerDark,
-              const Text('Hambuger Primary'),
-              AppSvgIcons.hamburgerPrimary,
-              const Text('Hambuger Light'),
-              Container(
-                color: Colors.black,
-                padding: const EdgeInsets.all(10),
-                child: AppSvgIcons.hamburgerLight,
-              ),
-              const Text('Luch Sent'),
-              AppSvgIcons.lunchSent,
-              const Text('Withdrawal'),
-              AppSvgIcons.withdrawal,
-              const Text('Mini Action Button'),
-            ],
-          ),
-        ),
-      ),
+      //     body: Padding(
+      //   padding: const EdgeInsets.symmetric(horizontal: 10),
+      //   child: SingleChildScrollView(
+      //     child: Column(
+      //       children: <Widget>[
+      //         const Text('Home Icon'),
+      //         AppSvgIcons.home,
+      //         const Text('Home Active'),
+      //         AppSvgIcons.homeActive,
+      //         const Text('Hambuger'),
+      //         AppSvgIcons.hamburgerDark,
+      //         const Text('Hambuger Primary'),
+      //         AppSvgIcons.hamburgerPrimary,
+      //         const Text('Hambuger Light'),
+      //         Container(
+      //           color: Colors.black,
+      //           padding: const EdgeInsets.all(10),
+      //           child: AppSvgIcons.hamburgerLight,
+      //         ),
+      //         const Text('Luch Sent'),
+      //         AppSvgIcons.lunchSent,
+      //         const Text('Withdrawal'),
+      //         AppSvgIcons.withdrawal,
+      //         const Text('Mini Action Button'),
+      //       ],
+      //     ),
+      //   ),
+      // ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
