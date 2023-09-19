@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:free_lunch_app/utils/colors.dart';
+import '../utils/colors.dart';
 
 class CommentWidget extends StatefulWidget {
   final String initialCommentText;
