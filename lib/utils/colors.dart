@@ -17,9 +17,12 @@ class AppColors {
    static const Color commentShade = Color(0xFF8C8C8C);
    static const Color commentBackground = Color(0xFFF2F2F2);
    static const Color tBlack4 = Color(0xFF737373);
-
+  static const Color tShadeColor = Color(0xFFA6A6A6);
+  static const Color tWhite = Color(0xFFFFFFFF);
 
 }
 
+  // Added a last minuteColor
 
 
+}
