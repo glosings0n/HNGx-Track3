@@ -37,10 +37,10 @@ class CommentWidgetState extends State<CommentWidget> {
         margin: const EdgeInsets.only(top: 10),
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
         decoration: BoxDecoration(
-          color: AppColors.commentBackground,
+          color: AppColors.backgroundColor,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
-            color: AppColors.commentShade,
+            color: AppColors.tShadeColor,
             width: 1,
           ),
         ),
