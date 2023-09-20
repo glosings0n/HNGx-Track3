@@ -24,5 +24,7 @@ class AppSvgIcons {
       SvgPicture.asset('assets/svgs/svg2.svg', semanticsLabel: 'Withdrawal');
   static Widget lunchRecieved =
       SvgPicture.asset('assets/svgs/svg3.svg', semanticsLabel: 'Lunch Recieved');
+  static Widget loginSvg =
+      SvgPicture.asset('assets/svgs/svg4.svg', semanticsLabel: 'Login');
 }
 
