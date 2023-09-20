@@ -121,13 +121,15 @@ class TotalCardTwo extends StatelessWidget {
 
 class TotalCardThree extends StatelessWidget {
   final String totalNum;
+  final String text1;
+  final String text2;
   final double width;
   final double height;
   const TotalCardThree(
       {super.key,
       required this.totalNum,
       required this.width,
-      required this.height});
+      required this.height, required this.text1, required this.text2});
 
   @override
   Widget build(BuildContext context) {
@@ -143,7 +145,7 @@ class TotalCardThree extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Text(
-            'You\'ve done well this month, Cheers 🥂',
+            text1,
             style: TextStyle(
               color: AppColors.tPrimaryColor,
               fontSize: width * .01 + 14,
@@ -158,8 +160,8 @@ class TotalCardThree extends StatelessWidget {
               ),
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   Container(
                     width: 20,
@@ -167,8 +169,22 @@ class TotalCardThree extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: AppColors.tWhite,
                       borderRadius: BorderRadius.circular(50),
+                      boxShadow: const <BoxShadow>[
+                        BoxShadow(
+                          color: AppColors.boxShade,
+                          spreadRadius: 20,
+                          blurRadius: 20,
+                          offset: Offset(4, 8)
+                        ),
+                        BoxShadow(
+                          color: AppColors.boxShade,
+                          spreadRadius: 20,
+                          blurRadius: 20,
+                          offset: Offset(4, 8)
+                        ),
+                      ]
                     ),
-                    margin: const EdgeInsets.only(bottom: 10),
+                    // margin: const EdgeInsets.only(bottom: 10),
                     child: AppSvgIcons.hamburgerPrimary2,
                   ),
                   SizedBox(width: width * .02),
@@ -186,7 +202,7 @@ class TotalCardThree extends StatelessWidget {
           ),
           SizedBox(height: height * .02),
           Text(
-            'Free Lunches',
+            text2,
             style: TextStyle(
               color: AppColors.tPrimaryColor,
               fontSize: width * .01 + 14,

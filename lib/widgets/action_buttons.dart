@@ -111,3 +111,40 @@ class ActionBtn extends StatelessWidget {
     );
   }
 }
+
+class MiniOutlinedActionBtn extends StatelessWidget {
+  final Color? btnColor;
+  final Color? textColor;
+  final Widget? icon;
+  final String text;
+  const MiniOutlinedActionBtn(
+      {super.key, this.btnColor, this.icon, required this.text, this.textColor});
+
+  @override
+  Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    return FittedBox(
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        decoration: BoxDecoration(
+          border: Border.all(color: btnColor ?? AppColors.tPrimaryColor, ),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Row(
+          children: <Widget>[
+            icon ?? const SizedBox(),
+            SizedBox(width: width * .02),
+            Text(
+              text,
+              style: TextStyle(
+                color: textColor,
+                fontSize: width * .01 + 14,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
