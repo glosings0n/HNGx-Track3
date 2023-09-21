@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:free_lunch_app/utils/colors.dart';
+import 'package:free_lunch_app/utils/svg_icons.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomCard extends StatelessWidget {
   final String cardText;
@@ -20,23 +22,29 @@ class CustomCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.tGray.withOpacity(.5),
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(4),
         ),
-        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+        padding: const EdgeInsets.symmetric(
+          vertical: 6,
+          horizontal: 16,
+        ),
+        width: 59,
+        height: 33,
         child: Row(
           children: <Widget>[
             Text(
               cardText,
-              style: TextStyle(
+              style: GoogleFonts.workSans(
                 color: AppColors.tBlack,
-                fontSize: width * .01 + 16,
+                fontWeight: FontWeight.w500,
+                fontSize: 18,
               ),
             ),
-            SizedBox(width: width * .01),
+            const SizedBox(width: 3),
             SizedBox(
-              width: iconWidth ?? 18,
-              height: iconWidth ?? 18,
-              child: icon,
+              width: iconWidth ?? 12,
+              height: iconWidth ?? 12,
+              child: AppSvgIcons.hamburgerDarkBold,
             ),
           ],
         ),

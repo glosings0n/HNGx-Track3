@@ -10,6 +10,8 @@ class AppSvgIcons {
       SvgPicture.asset('assets/svgs/home-active.svg', semanticsLabel: 'home active');
   static Widget hamburgerDark =
       SvgPicture.asset('assets/svgs/hambuger-dark.svg', semanticsLabel: 'hambuger dark');
+  static Widget hamburgerDarkBold =
+      SvgPicture.asset('assets/svgs/burger.svg', semanticsLabel: 'hambuger dark bold');
   static Widget hamburgerLight =
       SvgPicture.asset('assets/svgs/hambuger-light.svg', semanticsLabel: 'hambuger light');
   static Widget hamburgerPrimary2 =

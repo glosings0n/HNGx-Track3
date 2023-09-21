@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../utils/colors.dart';
+import '../../utils/svg_icons.dart';
 import '../../utils/typography.dart';
+import '../../widgets/action_buttons.dart';
 
 class SendRequestPage extends StatelessWidget {
   const SendRequestPage({super.key});
@@ -20,8 +22,6 @@ class SendRequestPage extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(
                   top: 192,
-                  left: 24,
-                  right: 24,
                 ),
                 decoration: BoxDecoration(
                   color: const Color.fromRGBO(255, 255, 255, 1),
@@ -34,12 +34,12 @@ class SendRequestPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                width: 342,
+                width: double.infinity,
                 height: 460,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
                     vertical: 84,
-                    horizontal: 20,
+                    horizontal: 40,
                   ),
                   child: SizedBox(
                     height: 284,
@@ -48,11 +48,11 @@ class SendRequestPage extends StatelessWidget {
                         SizedBox(
                           width: 140,
                           height: 140,
-                          child: Image.asset('assets/images/burger.png'),
+                          child: AppSvgIcons.withdrawal,
                         ),
                         const SizedBox(height: 20),
                         Text(
-                          'Withdrawal request sent',
+                          'Withdrawal request\nsent',
                           style: AppTypography.subHeader,
                           textAlign: TextAlign.center,
                         ),
@@ -70,27 +70,11 @@ class SendRequestPage extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(
                   top: 740,
-                  left: 24,
-                  right: 24,
                 ),
                 width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {
-                    FocusScope.of(context).requestFocus(FocusNode());
-                    debugPrint('Return Home');
-                  },
-                  style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(342, 56),
-                    backgroundColor: AppColors.primaryColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(32),
-                    ),
-                    elevation: 0,
-                  ),
-                  child: Text(
-                    'Return Home',
-                    style: AppTypography.button2Text,
-                  ),
+                child: const ActionBtn(
+                  widthM: double.infinity,
+                  text: 'Return Home',
                 ),
               ),
             ],

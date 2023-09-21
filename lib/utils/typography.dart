@@ -24,10 +24,29 @@ class AppTypography {
     height: 1,
   );
 
+ static TextStyle subHeader2Black = GoogleFonts.workSans(
+    fontSize: 16.0,
+    fontWeight: FontWeight.w500,
+    color: AppColors.tBlack,
+    height: 1,
+  );
+
   static TextStyle subHeader3 = GoogleFonts.workSans(
     fontSize: 16.0,
     fontWeight: FontWeight.w400,
     color: AppColors.tBlack4,
+  );
+
+  static TextStyle subHeader3Size12 = GoogleFonts.workSans(
+    fontSize: 12.0,
+    fontWeight: FontWeight.w400,
+    color: AppColors.tBlack4,
+  );
+
+  static TextStyle subHeader3w500Black = GoogleFonts.workSans(
+    fontSize: 12.0,
+    fontWeight: FontWeight.w500,
+    color: AppColors.tBlack,
   );
 
    static TextStyle title = GoogleFonts.workSans(

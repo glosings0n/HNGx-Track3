@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/colors.dart';
+import '../utils/typography.dart';
 
 class MiniActionBtn extends StatelessWidget {
   final Color? btnColor;
@@ -86,12 +87,13 @@ class ActionBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Container(
+      height: 56,
       width: widthM,
       constraints: BoxConstraints(minWidth: width * .5),
       padding: const EdgeInsets.symmetric(vertical: 12),
       decoration: BoxDecoration(
         color: btnColor ?? AppColors.tPrimaryColor,
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(32),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -100,11 +102,7 @@ class ActionBtn extends StatelessWidget {
           SizedBox(width: width * .02),
           Text(
             text,
-            style: TextStyle(
-              color: AppColors.tWhite,
-              fontSize: width * .01 + 14,
-              fontWeight: FontWeight.w600,
-            ),
+            style: AppTypography.button2Text,
           ),
         ],
       ),
