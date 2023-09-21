@@ -11,6 +11,12 @@ class AppTypography {
     height: 0.5
   );
 
+ static TextStyle subHeader = GoogleFonts.workSans(
+    fontSize: 23.0,
+    fontWeight: FontWeight.w500,
+    color: AppColors.tBlack,
+  );
+
  static TextStyle subHeader2 = GoogleFonts.workSans(
     fontSize: 16.0,
     fontWeight: FontWeight.w500,
@@ -57,6 +63,13 @@ class AppTypography {
     fontWeight: FontWeight.w400,
     color: AppColors.commentShade,
     height: 1.3,
+  );
+
+   static TextStyle bodyText3Black = GoogleFonts.workSans(
+    fontSize: 12.0,
+    fontWeight: FontWeight.w400,
+    color: AppColors.tBlack,
+    height: 1.4,
   );
 
    static TextStyle bodyText3Blue = GoogleFonts.workSans(

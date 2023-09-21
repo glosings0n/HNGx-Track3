@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../utils/colors.dart';
+import '../../utils/typography.dart';
 
 class SendRequestPage extends StatelessWidget {
   const SendRequestPage({super.key});
@@ -6,6 +8,7 @@ class SendRequestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.backgroundColor,
       body: SingleChildScrollView(
         child: Container(
           margin: const EdgeInsets.only(
@@ -25,37 +28,42 @@ class SendRequestPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: const [
                     BoxShadow(
-                      color: Colors.grey,
-                      blurRadius: 1,
-                      offset: Offset(0, 1),
+                      color: AppColors.tBlur,
+                      blurRadius: 16,
+                      offset: Offset(0, 4),
                     ),
                   ],
                 ),
                 width: 342,
                 height: 460,
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
                     vertical: 84,
                     horizontal: 20,
                   ),
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        width: 140,
-                        height: 140,
-                        child: Text('Losingson'),
-                      ),
-                      SizedBox(height: 25),
-                      Text(
-                        'Withdrawal request\nsent',
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(height: 30),
-                      Text(
-                        'You should be expecting your withdrawal in a couple of days. Check your mail for more details',
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
+                  child: SizedBox(
+                    height: 284,
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          width: 140,
+                          height: 140,
+                          child: Image.asset('assets/images/burger.png'),
+                        ),
+                        const SizedBox(height: 20),
+                        Text(
+                          'Withdrawal request sent',
+                          style: AppTypography.subHeader,
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 25),
+                        Text(
+                          'You should be expecting your withdrawal in a couple of days. Check your mail for more details',
+                          style: AppTypography.bodyText3Black,
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -68,16 +76,21 @@ class SendRequestPage extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
+                    FocusScope.of(context).requestFocus(FocusNode());
                     debugPrint('Return Home');
                   },
                   style: ElevatedButton.styleFrom(
                     fixedSize: const Size(342, 56),
+                    backgroundColor: AppColors.primaryColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(32),
                     ),
                     elevation: 0,
                   ),
-                  child: const Text('Return Home'),
+                  child: Text(
+                    'Return Home',
+                    style: AppTypography.button2Text,
+                  ),
                 ),
               ),
             ],

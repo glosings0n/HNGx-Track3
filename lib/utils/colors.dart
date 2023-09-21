@@ -19,6 +19,7 @@ class AppColors {
    static const Color tBlack4 = Color(0xFF737373);
   static const Color tShadeColor = Color(0xFFA6A6A6);
   static const Color tWhite = Color(0xFFFFFFFF);
+  static const Color tBlur = Color.fromRGBO(0, 0, 0, 0.1);
 
 }
 
