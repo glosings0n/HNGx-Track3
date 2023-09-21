@@ -65,6 +65,7 @@ class SendRequestPage extends StatelessWidget {
                   left: 24,
                   right: 24,
                 ),
+                width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
                     debugPrint('Return Home');

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'feature/screens/sent.request.screen.dart';
+import 'feature/screens/send.lunch.screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: SendRequestPage(),
+      home: SendLunchPage(),
     );
   }
 }
